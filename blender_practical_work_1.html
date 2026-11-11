@@ -15,8 +15,8 @@ kbd{font:600 .88em ui-monospace,SFMono-Regular,Menlo,monospace;background:#eef1f
 .grid-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}.grid-cards article{border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:#fcfcfd}.grid-cards p{font-size:14px;color:var(--muted);margin:5px 0 0}
 
 
-.top-navigation{padding:0 0 22px;margin:0 0 28px;border-bottom:1px solid var(--line)}
-.top-navigation h2{font-size:21px;margin-bottom:12px}
+.top-navigation{max-width:1120px;margin:28px auto 0;padding:0;border:0}.top-navigation h2{font-size:16px;color:#d4dae2;margin:0 0 10px}.top-navigation .lesson-nav{max-width:none;margin:0;grid-template-columns:repeat(2,minmax(0,1fr))}.top-navigation .nav-link{background:#2d333d;border-color:#48515e;color:#fff}.top-navigation .nav-link small{color:#c1c8d1}.top-navigation .nav-link:hover{background:#3a414c;border-color:#ffb17b}
+.top-navigation h2{font-size:16px;margin-bottom:10px}
 .top-navigation .lesson-nav{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none;margin:0}
 .video-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#111;margin:18px 0}
 .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -30,7 +30,7 @@ kbd{font:600 .88em ui-monospace,SFMono-Regular,Menlo,monospace;background:#eef1f
 .nav-link b,.nav-link small{grid-column:1}.nav-link small{font-size:13px;color:var(--muted)}
 .nav-link span{grid-column:2;grid-row:1/3;font-size:24px;color:var(--accent)}
 .nav-link:hover{border-color:var(--accent);background:var(--soft)}
-@media(max-width:540px){.lesson-nav{grid-template-columns:1fr}}
+@media(max-width:540px){.lesson-nav{grid-template-columns:1fr}.top-navigation{margin-top:22px}}
 figure{margin:22px auto 26px;max-width:780px;text-align:center}figure img{display:block;max-width:100%;max-height:620px;width:auto;height:auto;margin:auto;border-radius:7px;border:1px solid #e0e3e8;background:#f7f7f7}figcaption{font-size:13px;color:var(--muted);margin-top:7px}
 .shortcuts{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}.shortcuts th,.shortcuts td{text-align:left;border-bottom:1px solid var(--line);padding:10px 9px;vertical-align:top}.shortcuts th{background:#f4f6f8}.shortcuts td:first-child{width:155px}
 a{color:#a94c18} .small{font-size:13px;color:var(--muted)}footer{max-width:1120px;margin:0 auto;padding:0 20px 30px;color:#7a8491;font-size:12px}
@@ -38,7 +38,13 @@ a{color:#a94c18} .small{font-size:13px;color:var(--muted)}footer{max-width:1120p
 @media(max-width:540px){header{padding:34px 20px}.layout{padding:0 10px;margin:12px auto}.toc{grid-template-columns:1fr 1fr;padding:12px}main{padding:20px 16px}.grid-cards{grid-template-columns:1fr}.shortcuts td:first-child{width:118px}}
 @media print{body{background:#fff;font-size:11pt}.layout{display:block;margin:0;padding:0}.toc{display:none}main{border:0;padding:0}header{background:#fff;color:#111;padding:0 0 20px}header p{color:#444}section{break-inside:avoid}figure{break-inside:avoid}figure img{max-height:420px}a{color:#111;text-decoration:none}}
 </style></head><body>
-<header><div class="inner"><div class="eyebrow">Практична робота №1 · Blender 5.0</div><h1>Створення 3D-моделі гриба</h1><p>Оновлена інструкція з моделювання, вибору елементів сітки, пропорційного редагування та роботи з Mesh.</p></div></header>
+<header><div class="inner"><div class="eyebrow">Практична робота №1 · Blender 5.0</div><h1>Створення 3D-моделі гриба</h1><p>Оновлена інструкція з моделювання, вибору елементів сітки, пропорційного редагування та роботи з Mesh.</p></div><section id="navigation" class="top-navigation">
+<h2>Навігація</h2>
+<div class="lesson-nav">
+<a class="nav-link" href="index.html"><span aria-hidden="true">←</span><b>Усі практичні роботи</b><small>Повернутися до каталогу інструкцій</small></a>
+<a class="nav-link" href="blender_practical_work_2.html"><span aria-hidden="true">↘</span><b>Практична робота №2</b><small>Моделювання кружки з ручкою</small></a>
+</div>
+</section></header>
 <div class="layout">
 <nav class="toc"><div class="toc-title">Зміст</div>
 <a href="#mesh">1. Mesh-об’єкти</a><a href="#video">Відеоінструкція</a><a href="#selection">2. Режими та вибір</a><a href="#select-tools">3. Способи виділення</a>
@@ -46,13 +52,6 @@ a{color:#a94c18} .small{font-size:13px;color:var(--muted)}footer{max-width:1120p
 <a href="#mushroom">6. Моделювання гриба</a><a href="#details">7. Отвори та поділ</a><a href="#break">8. Додаткове завдання</a>
 <a href="#hotkeys">9. Довідник клавіш</a><a href="#sources">Джерела</a></nav>
 <main>
-<section id="navigation" class="top-navigation">
-<h2>Навігація</h2>
-<div class="lesson-nav">
-<a class="nav-link" href="index.html"><span aria-hidden="true">←</span><b>Усі практичні роботи</b><small>Повернутися до каталогу інструкцій</small></a>
-<a class="nav-link" href="blender_practical_work_2.html"><span aria-hidden="true">↘</span><b>Практична робота №2</b><small>Моделювання кружки з ручкою</small></a>
-</div>
-</section>
 <section id="mesh"><h2>1. Mesh-об’єкти та режими роботи</h2>
 <p class="lead">Практична робота №1 · Об’єкти сцени. Рендеринг · Моделювання одного гриба з одного Mesh-примітива.</p>
 
